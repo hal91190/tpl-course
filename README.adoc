@@ -18,6 +18,7 @@ Parameters common to book and slide output are in link:attributes.adoc[attribute
 == Project building
 Building the project requires a https://www.ruby-lang.org/[Ruby] environment.
 More precisely,
+
 * https://rubygems.org/[Ruby packages] (gems) are managed with https://bundler.io/[bundler],
 * building the project required https://ruby.github.io/rake/[rake], and
 * http://graphviz.org/[graphviz] is used for some diagrams.
