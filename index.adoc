@@ -1,0 +1,17 @@
+= Computer Science Course
+include::meta.adoc[]
+:doctype: book
+:toc: left
+:toc-title: Table of contents
+:sectanchors:
+:sectlinks:
+:sectnums:
+:masterdoc: // sections are integrated in the master document
+include::attributes.adoc[]
+
+:leveloffset: +1
+
+include::chapter1/chapter1.adoc[]
+include::chapter2/chapter2.adoc[]
+
+:leveloffset: -1

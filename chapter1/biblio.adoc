@@ -1,0 +1,11 @@
+* [[[BK16]]] *D. Barnes and M. Köllin*. http://www.bluej.org/objects-first/[_Objects First with Java_].  Pearson. 2016.
+* [[[Bloch08]]] *J. Bloch*. _Effective Java_.  Pearson. 2018.
+* [[[BG05]]] *J. Bloch and N. Gafter*. http://www.javapuzzlers.com/[_Java Puzzlers_].  Addison-Wesley. 2005.
+* [[[Dar14]]] *I. Darwin*. http://shop.oreilly.com/product/0636920026518.do[_Java Cookbook_].  O'Reilly Media. 2014.
+* [[[HC12]]] *C. S. Horstmann and G. Cornell*. http://www.horstmann.com/corejava.html[_Core Java - Fundamentals_].  Prentice Hall. 2015.
+* [[[HC13]]] *C. S. Horstmann and G. Cornell*. http://www.horstmann.com/corejava.html[_Core Java - Advanced Features_].  Prentice Hall. 2016.
+* [[[Meyer08]]] *B. Meyer*. http://www.eyrolles.com/Informatique/Livre/9782212122701/livre-conception-et-programmation-orientees-objet.php[_Conception et programmation orientées objet_].  Eyrolles. 2008.
+* [[[UFM14]]] *R.-G. Urma, M. Fusco and A. Mycroft*. https://www.manning.com/books/java-8-in-action[_Java 8 in Action_].  Manning. 2014.
+* [[[JavaAPI]]]  http://docs.oracle.com/javase/8/docs/api/[_The Java API Documentation_].   2014.
+* [[[JavaDevGuide]]]  http://docs.oracle.com/javase/8/docs/[_Java Platform Standard Edition 8 Documentation_].   2014.
+* [[[JavaTutorial]]]  http://docs.oracle.com/javase/tutorial/[_The Java Tutorials_].   2014.

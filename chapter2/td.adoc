@@ -1,0 +1,107 @@
+= Exercices (Java)
+
+[CAUTION]
+====
+* Utilisation de l'environnement de développement https://www.bluej.org/[BlueJ].
+* Les seules sources d'information externes autorisées sont
+** la référence de l'http://docs.oracle.com/javase/8/docs/api/[API Java],
+** le http://docs.oracle.com/javase/tutorial/[tutoriel] Java,
+** la http://www.bluej.org/doc/documentation.html[documentation] de https://www.bluej.org/[BlueJ].
+* Exécution interactive uniquement avec https://www.bluej.org/[BlueJ] (pas de méthode `main` ni d'affichage).
+====
+
+== Découverte de BlueJ
+Dans cette exercice, vous apprendrez les manipulations de base de l'environnement https://www.bluej.org/[BlueJ].
+
+. Ouvrez le projet d'exemple `people2` (_Projects/Open Projet..._).
+Les projets d'exemples se trouvent dans le répertoire d'installation de BlueJ sous Windows ou dans `/usr/share/doc/BlueJ` sous Linux.
+.. Quelles classes y-a-t-il dans ce projet ?
+.. Quelles relations existe-t-il entre ces classes ?
+. Compilez le projet (Bouton _Compile_)
+.. Quels logiciels faut-il pour compiler un projet en Java ? pour l'exécuter ?
+. Création d'objet (_menu contextuel d'une classe_)
+.. Quels constructeurs sont disponibles pour chaque classe ?
+.. Pourquoi la classe `Person` n'en a-t-elle aucun ?
+.. Créez un employé (_Staff_) _p1_ ayant pour nom _Smith_, pour année de naissance _1980_ et pour numéro de bureau _D100_.
+. Invocation de méthode (_menu contextuel d'un objet_)
+.. Quelles méthodes propose _p1_ ?
+.. Exécutez les méthodes `getRoom()` et `getName`. Dans quelles classes sont-elles définies ?
+.. Exécutez la méthode `setAddress` .
+. Évaluation à la volée de code Java (_View/Show Code Pad_).
+Les manipulations ci-dessous sont à réaliser dans le Code Pad.
+.. Créez un étudiant en précisant son nom, son année de naissance et son identifiant.
+.. Copiez-le (_glisser-déposer_) dans la fenêtre des objets.
+.. Exécutez la méthode `getName` dans le _Code Pad_.
+. Inspection d'un objet (_menu contextuel d'un objet_)
+.. Inspectez l'objet _p1_ ?
+.. De quels attributs son état est-il formé ?
+.. Pouvez-vous inspecter tous ses attributs ? Pourquoi ?
+. Éditez le code Java de la classe `Staff` (_double-click sur la classe_)
+.. Quels éléments du langage trouve-t-on dans cette classe ?
+.. À quoi correspondent les couleurs de fond ?
+.. Visualisez la documentation de la classe (_liste déroulante en haut à droite_).
+.. Quelle relation y-a-t-il entre la documentation et le code source ? Modifiez un commentaire dans le code et visualisez à nouveau la documentation ?
+.. Quel parallèle peut-on établir avec les fichiers `.h` et `.c` du langage C ?
+
+== Manipulation d'objets
+Dans cette exercice, vous effectuerez les manipulations tout d'abord de façon interactive, puis en tapant les instructions dans le _Code Pad_.
+
+. Ouvrez le projet d'exemple https://www.bluej.org/[BlueJ] _shapes_ et compiler-le.
+. Réalisez les manipulations suivantes
+.. Créez un cercle et rendez-le visible.
+.. Déplacez-le horizontalement de 100 unités.
+.. Changez sa couleur en rouge.
+.. Déplacez-le verticalement de 50 unités.
+. Représentez la scène suivante :
+** une maison (carré bleu et triangle rouge),
+** un soleil jaune au-dessus et à droite de la maison.
+
+== Modification d'une classe
+Cet exercice utilise le http://e-campus2.uvsq.fr/Members/steplope/Fichiers/entreprise-bluej.zip/at_download/file[projet `Entreprise`] (cf. figure <<entreprise,ci-dessous>>) à ouvrir sous https://www.bluej.org/[BlueJ] (_Project/Open Non Bluej..._).
+
+[#entreprise]
+.Diagramme de classe du projet `Entreprise`
+[plantuml,entreprise,png]
+....
+class Entreprise {
+  - nom : chaîne
+  + Entreprise(nom : chaîne)
+  + embauche(employé : Employé)
+}
+class Employé {
+  - prénom : chaîne
+  - nom : chaîne
+  + Employé(prénom : chaîne, nom : chaîne)
+  + toString() : chaîne
+}
+Entreprise -> "*" Employé : emploie >
+....
+
+. Modifiez la classe `Employe` comme suit:
+.. ajoutez l'attribut privé `age`,
+.. modifiez les méthodes pour prendre en compte ce changement,
+.. recompilez et testez ce changement.
+. Mettez à jour les commentaires Javadoc et vérifier la documentation de la classe.
+. Ajoutez la méthode `toString` à la classe `Entreprise` : cette méthode retourne une chaîne de caractères contenant le nom de l'entreprise et la liste de ses employés (prénom, nom et âge),
+. recompiler les deux classes et tester les nouvelles méthodes.
+
+== Utilisation d'un débogueur
+Cet exercice utilise le même projet que l'exercice précédent.
+Pour chaque test, vous créerez une entreprise et deux employés que l'entreprise embauchera puis vous invoquerez `toString` sur l'entreprise.
+
+. Faites afficher le débogueur intégré à https://www.bluej.org/[BlueJ] (_View/Show Debugger_).
+Quels éléments sont visibles dans le débogueur ?
+Quelles actions peut-on effectuer à partir du débogueur ?
+. Lancer un premier test et vérifier le comportement du programme.
+. Lancer un second test en saisissant la valeur `null` lors de l'embauche du deuxième employé
+** Que se passe-t-il ?
+** Quelle instruction pose problème ?
+. Placer un point d'arrêt (_breakpoint_) au début de la méthode `toString` de `Entreprise` (_click dans la marge de l'éditeur_).
+. Reproduisez le second test:
+.. l'exécution doit s'arrêter au niveau du _breakpoint_,
+.. faites exécuter la méthode pas à pas en consultant la valeur des variables,
+.. quelle différence existe-t-il entre les commandes _Step_ et _Step Into_ du débogueur ?
+.. pour quel employé le problème se pose-t-il ?
+.. quelle est donc finalement la cause de l'erreur ?
+. Modifiez la classe `Entreprise` pour éviter le problème.
+. Vérifiez en reproduisant à nouveau le second test.

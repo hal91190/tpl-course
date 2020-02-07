@@ -1,0 +1,48 @@
+= A level-1 (section) title
+
+== A level-2 (slide) title
+* Avec un https://en.wikipedia.org/wiki/Compiled_language[_langage compilé_], le code source du programme est transformé en _code machine_ par le _compilateur_
+* Dans un https://en.wikipedia.org/wiki/Interpreted_language[_langage interprété_], le code source du programme est exécuté "à la volée" par l'_interpréteur_
+* Certains langages sont à la fois compilés et interprétés
+* Il existe des approches intermédiaires (compilation _Just In Time_ (JIT))
+
+== Another level-2 (slide) title
+.Compilation séparée (produit `util.o` et `main.o`)
+
+[source,bash,indent=0]
+----
+$ gcc -c util.c
+$ gcc -c main.c
+----
+
+.Édition de liens (produit `monprog`)
+
+[source,bash,indent=0]
+----
+$ gcc -o monprog main.o util.o
+----
+
+.`monprog` est exécutable
+
+[source,bash,indent=0]
+----
+$ ./monprog
+----
+
+== How to use tables with Asciidoctor
+
+[options="header"]
+|===
+| Langage | Implémentation | Scripts | Typage | Paradigme | Mémoire
+
+| C | Compilé | Non | explicite, statique | procédural | manuelle
+
+| Java | Compilé, interprété | Non | explicite, statique | OO, fonc., générique | auto
+
+| PHP | Interprété | Oui | implicite, dynamique | proc., OO | auto
+
+| Python | Compilé, Interprété | Oui | implicite, dynamique | proc., OO, fonc. | auto
+
+| Scala | Compilé, interprété | Oui | implicite, statique | OO, fonc., générique | auto
+
+|===
