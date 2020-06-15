@@ -1,8 +1,0 @@
-:stem:
-:icons: font
-:imagesdir: figs
-:prog-lang: all
-:sourcedir: ../examples/
-:source-highlighter: highlightjs
-:revealjs_theme: black
-:revealjs_slideNumber: true
