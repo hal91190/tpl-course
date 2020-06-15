@@ -44,3 +44,29 @@ $ rake
 == See also
 * https://asciidoctor.org/[Asciidoctor]
 * https://revealjs.com/#/[Reveal.js]
+
+== Deploying on github pages
+The public site can be accessed using github pages.
+The content on branch `gh-pages` is used as the root for the web site.
+
+. Switch to branch `gh-pages`
++
+----
+$ git checkout gh-pages
+----
+. Copy the content of the `html` directory to the root
++
+----
+$ mv html/* .
+$ rm -r html
+----
+. Commit the changes (if there is new content, use `git add` before)
++
+----
+$ git ci -am"Update the public site"
+----
+. Publish on github
++
+----
+$ git push origin gh-pages
+----
